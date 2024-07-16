@@ -13,7 +13,7 @@ local Items = {
 }
 
 local LoadLocal = false
-local MainLink = LoadLocal and "" or "https://raw.githubusercontent.com/Sigmanic/Strategies-X/main/"
+local MainLink = LoadLocal and "" or "https://raw.githubusercontent.com/adkostatt/Strategies-X_Fix_PotatoMode_For_Delta/main/"
 
 local OldTime = os.clock()
 
@@ -108,7 +108,7 @@ UILibrary.options.toggledisplay = 'Fill'
 UI = StratXLibrary.UI
 UtilitiesConfig = StratXLibrary.UtilitiesConfig
 
-local Patcher = loadstring(game:HttpGet(MainLink.."TDS/ConvertFunc.lua", true))()--loadstring(game:HttpGet("https://raw.githubusercontent.com/Sigmanic/Strategies-X/main/ConvertFunc.lua", true))()
+local Patcher = loadstring(game:HttpGet(MainLink.."TDS/ConvertFunc.lua", true))()--loadstring(game:HttpGet("https://raw.githubusercontent.com/adkostatt/Strategies-X_Fix_PotatoMode_For_Delta/main/ConvertFunc.lua", true))()
 function ParametersPatch(FuncsName,...)
     if type(...) == "table" and #{...} == 1 then --select("#",...)
         return ...
@@ -603,7 +603,7 @@ if CheckPlace() then
             end
             if UtilitiesConfig.Webhook.Enabled then
                 task.spawn(function()
-                    loadstring(game:HttpGet(MainLink.."TDS/Webhook.lua", true))()--loadstring(game:HttpGet("https://raw.githubusercontent.com/Sigmanic/Strategies-X/main/Webhook.lua", true))()
+                    loadstring(game:HttpGet(MainLink.."TDS/Webhook.lua", true))()--loadstring(game:HttpGet("https://raw.githubusercontent.com/adkostatt/Strategies-X_Fix_PotatoMode_For_Delta/main/Webhook.lua", true))()
                     prints("Sent Webhook Log")
                 end)
             end
