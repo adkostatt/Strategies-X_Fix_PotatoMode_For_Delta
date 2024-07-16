@@ -1,6 +1,6 @@
 <br/>
 <p align="center">
-  <h3 align="center">Strategies X fixed potato mode</h3>
+  <h3 align="center">Strategies X fixed potato mode( anyway not working:( )</h3>
 
   <p align="center">
     A version inspired By MoneyMaker's AutoStrat, that aims to be fully open-sourced and more customizable.
