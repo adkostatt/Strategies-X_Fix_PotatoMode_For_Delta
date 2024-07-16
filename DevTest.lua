@@ -246,10 +246,10 @@ if FeatureConfig["StrategiesX"] then
         if getnamecallmethod() == 'HttpGet' then
             if Args[1] == "https://raw.githubusercontent.com/banbuskox/dfhtyxvzexrxgfdzgzfdvfdz/main/ckmhjvskfkmsStratFun2" then
                 appendlog("Hooked AutoStrat Main Library Using hookmetamethod")
-                Args[1] = "https://raw.githubusercontent.com/Sigmanic/Strategies-X/main/MainSource.lua"
+                Args[1] = "https://raw.githubusercontent.com/Strategies-X_Fix_PotatoMode_For_Delta/main/MainSource.lua"
             elseif Args[1] == "https://raw.githubusercontent.com/banbuskox/dfhtyxvzexrxgfdzgzfdvfdz/main/asjhxnjfdStratFunJoin" then
                 appendlog("Hooked AutoStrat Joining Library Using hookmetamethod")
-                Args[1] = "https://raw.githubusercontent.com/Sigmanic/Strategies-X/main/CustomJoiningElevators.lua"
+                Args[1] = "https://raw.githubusercontent.com/Strategies-X_Fix_PotatoMode_For_Delta/main/CustomJoiningElevators.lua"
             end
         elseif getnamecallmethod() == 'Kick' then
             wait(math.huge)
@@ -260,10 +260,10 @@ if FeatureConfig["StrategiesX"] then
     OldHook = hookfunction(game.HttpGet, function(Self, Url, ...)
         if Url == "https://raw.githubusercontent.com/banbuskox/dfhtyxvzexrxgfdzgzfdvfdz/main/ckmhjvskfkmsStratFun2" then
             appendlog("Hooked AutoStrat Main Library Using hookfunction")
-            Url = "https://raw.githubusercontent.com/Sigmanic/Strategies-X/main/MainSource.lua"
+            Url = "https://raw.githubusercontent.com/Strategies-X_Fix_PotatoMode_For_Delta/main/MainSource.lua"
         elseif Url == "https://raw.githubusercontent.com/banbuskox/dfhtyxvzexrxgfdzgzfdvfdz/main/asjhxnjfdStratFunJoin" then
             appendlog("Hooked AutoStrat Joining Library Using hookfunction")
-            Url = "https://raw.githubusercontent.com/Sigmanic/Strategies-X/main/CustomJoiningElevators.lua"
+            Url = "https://raw.githubusercontent.com/Strategies-X_Fix_PotatoMode_For_Delta/main/CustomJoiningElevators.lua"
         end
         return OldHook(Self, Url, ...)
     end)
@@ -737,7 +737,7 @@ if not (Config[game:GetService("Players").LocalPlayer.Name] and Config[game:GetS
                 return
             end
             w["object"].Parent.Parent:Destroy()
-            loadstring(game:HttpGet("https://raw.githubusercontent.com/Sigmanic/Strategies-X/main/DevTest.lua", true))()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/Strategies-X_Fix_PotatoMode_For_Delta/main/DevTest.lua", true))()
         end
     end)
 
@@ -754,7 +754,7 @@ if not (Config[game:GetService("Players").LocalPlayer.Name] and Config[game:GetS
     end)
     w:Button("Re-Execute",function()
         w["object"].Parent.Parent:Destroy()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/Sigmanic/Strategies-X/main/DevTest.lua", true))()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Strategies-X_Fix_PotatoMode_For_Delta/main/DevTest.lua", true))()
     end)
     w:Button("Delete Gui",function()
         w["object"].Parent.Parent:Destroy()
