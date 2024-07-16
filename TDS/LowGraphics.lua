@@ -6,7 +6,6 @@ local Lighting = game:GetService("Lighting")
 
 local MinimizeConfig = {
     [true] = {
-        fps = 25,
         QualityLevel = Enum.QualityLevel.Level01,
         PhysicsThrottle = Enum.EnviromentalPhysicsThrottle.Disabled,
         Technology = Enum.Technology.Compatibility,
@@ -18,7 +17,7 @@ getgenv().MinimizeClient = getgenv().MinimizeClient or function(boolean)
     local boolean = if type(boolean) == "boolean" then boolean else true
     if not MinimizeConfig[false] then
         MinimizeConfig[false] = {
-            fps = 60,
+                
             GlobalShadow = Lighting.GlobalShadows,
             PhysicsThrottle = settings().Physics.PhysicsEnvironmentalThrottle,
             QualityLevel = settings():GetService("RenderSettings").QualityLevel,
@@ -27,9 +26,6 @@ getgenv().MinimizeClient = getgenv().MinimizeClient or function(boolean)
         }
     end
     local Config = MinimizeConfig[boolean]
-    pcall(function()
-        setfpscap(Config.fps)
-    end)
     settings():GetService("RenderSettings").QualityLevel = Config.QualityLevel
     settings().Physics.PhysicsEnvironmentalThrottle = Config.PhysicsThrottle
     if sethiddenproperty then
